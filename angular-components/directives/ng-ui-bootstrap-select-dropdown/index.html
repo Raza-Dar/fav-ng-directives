@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title ></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    </head>
+<body ng-app="bootstrap-select-dropdown">
+
+<div ng-controller="DemoController" class="container">
+  <h1> Angular ui bootstrap dropdown selectable directive</h1>
+  <div class="col-md-12">
+    <pre>
+   * This directive used the angular UI dropdown feature and generate the dropdown by taking a list and
+   * will mark the list with it's model value.
+   * This directive also take certain options as an optional parametes like,
+   * bool is_open = to open the dropdown automatically
+   * bool big_btn  = to use bootstrap big button for dropdown button
+   * bool disable_btn = to disabled the dropdown by default
+   * string btn_class = to add any class or classes to dropdown button.
+ </pre>
+ <h3>Examples</h3>
+ <code>
+
+    &lt;div ng-if="dropdowns.makes.length" mark-dd-generic="dropdowns.makes" callback="getCarModels(value)" ng-model="search.make"
+            dropdown-options="{is_open: open_makes, disable_btn : disable_make, big_btn : false, btn_class:'btn-sm-arrow-right' }"&gt;
+     &lt;/div&gt;
+ </code>
+ </div>
+  <div class="col-md-6 col-md-offset-3">
+      <h4 class="primary">Select dropdown with ajax request and with key-value pair data</h4>
+      <label>Model1:</label> {{list1_model}}
+      <br/>
+      <div ng-if="dropdown_list1.length"
+           mark-dd-generic="dropdown_list1"
+           callback="callback(value)"
+           ng-model="list1_model"
+           dropdown-options="{is_open: false, disable_btn : false, is_key_value : true, key_name : 'name', key_value: 'value' }">
+      </div>
+  </div>
+<div class="col-md-12"><div>
+      <div class="col-md-6 col-md-offset-3">
+        <h4 class="primary">Select dropdown preselected model and with open option by default</h4>
+        <small>and with custome class applied on button.</small>
+
+        <label>Model2:</label> {{list2_model}}
+          <br/>
+        <div mark-dd-generic="dropdown_list2"
+             callback="callback(value)"
+             ng-model="list2_model"
+             dropdown-options="{is_open: true, disable_btn : false, btn_class:'btn-sm-arrow-right' }">
+        </div>
+      </div>
+</div>
+
+<div id="js-scripts">
+    <!-- compiled JavaScript -->
+    <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.2/ui-bootstrap-tpls.js'></script>
+
+    <script src='directive.js'></script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "bower.json",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Raza-Dar/fav-ng-directives",
+  "authors": [
+    "mrazadar@gmail.com"
+  ],
+  "description": "This will have all the bower dependencies for bower packages.",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "Free",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "*",
+    "angular-ui-bootstrap" : "*",
+    "bootstrap" : "*"
+  }
+}
