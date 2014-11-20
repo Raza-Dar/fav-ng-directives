@@ -1,3 +1,7 @@
+
+See in action Demo:
+http://plnkr.co/edit/ohMQKvnlC9rCDXL0s6jx?p=preview
+
 /** This directive used the angular UI dropdown feature and generate the dropdown by taking a list and
  * will mark the list with it's model value.
  * This directive also take certain options as an optional parametes like,
@@ -16,3 +20,6 @@
 ToDo --
 1 -  Dynamic List model is't working on controller scope.
 2 -  Remove Jquery Dependency...
+
+
+Credits: Muhammad Raza Dar
